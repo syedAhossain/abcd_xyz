@@ -616,17 +616,17 @@
             headers: new Headers({
                 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzdkZWFlYTU3MDgxNjZkMDdiMjBiMjAiLCJpYXQiOjE2NjkxOTY2MjMsImV4cCI6MTY2OTI4MzAyM30.Bp0Tp_-EWPzuLjNCgO_McVJcEL23leVFk1hLdFfFHD8',
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin':'*',
-                'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'
+//                 'Access-Control-Allow-Origin':'*',
+//                 'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'
             })
           }
 
-          const proxyUrl = "https://thingproxy.freeboard.io/fetch/";
+//           const proxyUrl = "https://thingproxy.freeboard.io/fetch/";
           // const proxyUrl = "http://alloworigin.com/get?url=";
 
           // const urlMaker = `https://api.allorigins.win/get?url=http://api.cup2022.ir/api/v1/team/6}`
           const teamIdUrl = 'http://api.cup2022.ir/api/v1/team';
-          fetch(proxyUrl+teamIdUrl, options)
+          fetch(teamIdUrl, options)
                 .then(function(res) {
                   console.log(res.json());
                   return res.json();
