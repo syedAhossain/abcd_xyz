@@ -612,28 +612,31 @@
 		<script type="text/javascript" src="script.js"></script>
     <script type="text/javascript">
           const options = { 
-            method: 'GET', 
-            headers: new Headers({
-                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzdkZWFlYTU3MDgxNjZkMDdiMjBiMjAiLCJpYXQiOjE2NjkxOTY2MjMsImV4cCI6MTY2OTI4MzAyM30.Bp0Tp_-EWPzuLjNCgO_McVJcEL23leVFk1hLdFfFHD8',
-                'Content-Type': 'application/json',
-//                 'Access-Control-Allow-Origin':'*',
-//                 'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'
-            })
-          }
+    method: 'GET', 
+    headers: new Headers({
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzdkZWFlYTU3MDgxNjZkMDdiMjBiMjAiLCJpYXQiOjE2NjkyMDQwNjQsImV4cCI6MTY2OTI5MDQ2NH0.xG4-bv3PA67C3OgPYORfdW6BZI3qbTJyKwwubQfPebo',
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin':'*',
+        'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'
+    })
+}
 
-//           const proxyUrl = "https://thingproxy.freeboard.io/fetch/";
-          // const proxyUrl = "http://alloworigin.com/get?url=";
+const proxyUrl = "https://thingproxy.freeboard.io/fetch/";
+// const proxyUrl = "http://alloworigin.com/get?url=";
 
-          // const urlMaker = `https://api.allorigins.win/get?url=http://api.cup2022.ir/api/v1/team/6}`
-//           const teamIdUrl = 'http://api.cup2022.ir/api/v1/team';
-          fetch('http://api.cup2022.ir/api/v1/team', options)
-                .then(function(res) {
-                  console.log(res.json());
-                  return res.json();
-                 })
-                // .then(function(resJson) {
-                //   console.log(resJson);
-                //  })
+// const urlMaker = `https://api.allorigins.win/get?url=http://api.cup2022.ir/api/v1/team/6}`
+const teamsUrl = 'http://api.cup2022.ir/api/v1/team';
+const teamIdUrl = "http://api.cup2022.ir/api/v1/team/6";
+const standingsUrl = "http://api.cup2022.ir/api/v1/standings";
+
+const otherProxy = "https://proxy.cors.sh/";
+fetch(otherProxy + standingsUrl, options)
+      .then(function(res) {
+        return res.json();
+       })
+      .then(function(resJson) {
+        console.log(resJson);
+       })
     
     </script>
 	</body>
