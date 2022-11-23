@@ -625,8 +625,8 @@
           // const proxyUrl = "http://alloworigin.com/get?url=";
 
           // const urlMaker = `https://api.allorigins.win/get?url=http://api.cup2022.ir/api/v1/team/6}`
-          const teamIdUrl = 'http://api.cup2022.ir/api/v1/team';
-          fetch(teamIdUrl, options)
+//           const teamIdUrl = 'http://api.cup2022.ir/api/v1/team';
+          fetch('http://api.cup2022.ir/api/v1/team', options)
                 .then(function(res) {
                   console.log(res.json());
                   return res.json();
